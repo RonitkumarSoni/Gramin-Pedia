@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyaan-Setu | Global Knowledge Bridge</title>
-    <meta name="description" content="Universal knowledge portal optimized for 2G rural networks.">
+    <title>Gramin-Pedia | Knowledge for Rural Empowerment</title>
     
     <link rel="stylesheet" href="style.css">
     
@@ -18,19 +17,16 @@
     <div class="app-container">
 
         <header class="app-header">
-            <div class="logo">🌉 Gyaan-Setu</div>
-            <p class="tagline">Connecting Rural India to World Knowledge</p>
+            <div class="logo">🌉 Gramin-Pedia</div>
+            <p class="tagline">Providing World-Class Knowledge to Rural Communities</p>
         </header>
 
         <main>
-            <form action="https://en.wikipedia.org/w/index.php" method="get" target="_blank" class="search-card">
+            <form id="graminSearchForm" class="search-card">
                 
-                <input type="hidden" name="family" value="wikipedia">
-                <input type="hidden" name="go" value="Go">
-
                 <div class="form-group">
-                    <label for="langInput">1. Choose Language (भाषा चुनें)</label>
-                    <input list="world_languages" name="language" id="langInput" placeholder="Type your lang / अपनी भाषा चुने ..." required>
+                    <label for="langInput">1. Select Language (भाषा चुनें)</label>
+                    <input list="world_languages" id="langInput" placeholder="Choose language (e.g. Marathi)" required>
                     
                     <datalist id="world_languages">
                         <option value="Hindi">Hindi (हिंदी)</option>
@@ -47,90 +43,95 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="topic">2. Topic (विषय) - <span>Type to search...</span></label>
-                    <input list="topic_suggestions" type="text" name="search" id="topic" placeholder="e.g. Solar, Kheti, Law..." required>
+                    <label for="topic">2. Topic (विषय)</label>
+                    <input list="topic_suggestions" type="text" id="topic" placeholder="Search anything (e.g. Solar, Law...)" required>
                     
                     <datalist id="topic_suggestions">
                         <option value="Organic Farming">जैविक खेती (Organic Farming)</option>
                         <option value="Drip Irrigation">टपक सिंचाई (Drip Irrigation)</option>
-                        <option value="Dairy Farming">डेयरी फार्मिंग (Dairy)</option>
-                        <option value="Poultry Farming">मुर्गी पालन (Poultry)</option>
-                        <option value="Soil Health Card Scheme">मृदा स्वास्थ्य कार्ड (Soil Health)</option>
-                        <option value="Kharif crops">खरीफ फसलें (Kharif Crops)</option>
-                        <option value="Rabi crops">रबी फसलें (Rabi Crops)</option>
-                        <option value="Tractor">ट्रैक्टर मेंटेनेंस (Tractor)</option>
-
                         <option value="Pradhan Mantri Kisan Samman Nidhi">पीएम किसान निधि (PM Kisan)</option>
-                        <option value="Mahatma Gandhi National Rural Employment Guarantee Act">मनरेगा (MNREGA)</option>
-                        <option value="Aadhaar">आधार कार्ड (Aadhaar Card)</option>
-                        <option value="Ration card">राशन कार्ड (Ration Card)</option>
-                        <option value="Ayushman Bharat Yojana">आयुष्मान भारत (Health Scheme)</option>
-                        <option value="Sukanya Samriddhi Account">सुकन्या समृद्धि योजना</option>
-
+                        <option value="MNREGA">मनरेगा (MNREGA)</option>
                         <option value="First aid">प्राथमिक चिकित्सा (First Aid)</option>
-                        <option value="CPR">सीपीआर कैसे दें (CPR)</option>
                         <option value="Snakebite">सर्पदंश उपचार (Snake Bite)</option>
-                        <option value="Dengue fever">डेंगू से बचाव (Dengue)</option>
-                        <option value="Ayurveda">आयुर्वेद (Ayurveda)</option>
-                        <option value="Yoga">योग आसन (Yoga)</option>
-                        <option value="Nutrition">पोषण (Nutrition)</option>
-
-                        <option value="Solar System">सौर मंडल (Solar System)</option>
-                        <option value="Photosynthesis">प्रकाश संश्लेषण (Photosynthesis)</option>
-                        <option value="Constitution of India">भारत का संविधान (Constitution)</option>
-                        <option value="Mahatma Gandhi">महात्मा गांधी (History)</option>
-                        <option value="Mathematics">गणित (Maths)</option>
-                        <option value="English grammar">अंग्रेजी व्याकरण (English Grammar)</option>
-
-                        <option value="Solar energy">सौर ऊर्जा (Solar Energy)</option>
-                        <option value="Internet">इंटरनेट कैसे काम करता है</option>
-                        <option value="Mobile phone">मोबाइल फोन रिपेयरिंग</option>
+                        <option value="Indian Constitution">भारत का संविधान</option>
+                        <option value="Solar Energy">सौर ऊर्जा</option>
                     </datalist>
                 </div>
 
                 <button type="submit" class="search-btn">
-                    🚀 Search on Wikipedia
+                    🚀 Search Gramin-Pedia
                 </button>
             </form>
 
             <section class="quick-links">
-                <h3>🌱 Popular Categories (लोकप्रिय)</h3>
+                <h3>🌱 Verified Categories</h3>
                 
                 <details class="accordion">
-                    <summary>🌾 Agriculture (खेती)</summary>
+                    <summary>🌾 Agriculture & Farming</summary>
                     <div class="accordion-content">
-                        <a href="https://hi.m.wikipedia.org/wiki/खेती" target="_blank">Modern Farming Guide</a>
-                        <a href="https://hi.m.wikipedia.org/wiki/पशुपालन" target="_blank">Animal Husbandry (Pashupalan)</a>
-                        <a href="https://hi.m.wikipedia.org/wiki/मौसम_पूर्वानुमान" target="_blank">Weather Forecasting Info</a>
+                        <a href="https://hi.m.wikipedia.org/wiki/खेती" target="_blank">Modern Farming Techniques</a>
+                        <a href="https://hi.m.wikipedia.org/wiki/पशुपालन" target="_blank">Animal Husbandry Guide</a>
                     </div>
                 </details>
 
                 <details class="accordion">
-                    <summary>⚖️ Rights & Laws (अधिकार)</summary>
+                    <summary>⚖️ Rights & Legal Aid</summary>
                     <div class="accordion-content">
-                        <a href="https://hi.m.wikipedia.org/wiki/सूचना_का_अधिकार_अधिनियम,_2005" target="_blank">RTI Act (Soochana Ka Adhikar)</a>
-                        <a href="https://hi.m.wikipedia.org/wiki/भारत_का_संविधान" target="_blank">Indian Constitution Basics</a>
-                        <a href="https://hi.m.wikipedia.org/wiki/पंचायती_राज" target="_blank">Panchayati Raj System</a>
+                        <a href="https://hi.m.wikipedia.org/wiki/सूचना_का_अधिकार_अधिनियम,_2005" target="_blank">RTI Act Knowledge</a>
+                        <a href="https://hi.m.wikipedia.org/wiki/भारत_का_संविधान" target="_blank">Basic Constitutional Rights</a>
                     </div>
                 </details>
 
                 <details class="accordion">
-                    <summary>🚑 Emergency Guide</summary>
+                    <summary>🚑 Health & Emergencies</summary>
                     <div class="accordion-content">
-                        <a href="https://hi.m.wikipedia.org/wiki/हृदय_का_दौरा" target="_blank">Heart Attack Symptoms</a>
-                        <a href="https://hi.m.wikipedia.org/wiki/लू" target="_blank">Heat Stroke (Loo lagna)</a>
+                        <a href="https://hi.m.wikipedia.org/wiki/हृदय_का_दौरा" target="_blank">Heart Attack Emergency</a>
+                        <a href="https://hi.m.wikipedia.org/wiki/लू" target="_blank">Heat Stroke Prevention</a>
                     </div>
                 </details>
             </section>
-
         </main>
 
         <footer class="app-footer">
-            <p>Status: <span class="status-dot"></span> <strong>Wikipedia Connected</strong></p>
-            <p class="copyright">&copy; 2025 Gyaan-Setu Project</p>
+            <p>Connection: <span class="status-dot"></span> <strong>Global Knowledge Node Active</strong></p>
+            <p class="copyright">&copy; 2025 Gramin-Pedia Portal | Empowering Lives</p>
         </footer>
 
     </div>
+
+    <script>
+        // Manually mapping language
+        const languageDirectory = {
+            'Hindi': 'hi',
+            'English': 'en',
+            'Marathi': 'mr',
+            'Gujarati': 'gu',
+            'Bengali': 'bn',
+            'Tamil': 'ta',
+            'Telugu': 'te',
+            'Kannada': 'kn',
+            'Punjabi': 'pa',
+            'Odia': 'or'
+        };
+
+        const formElement = document.getElementById('graminSearchForm');
+        
+        formElement.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const userLanguage = document.getElementById('langInput').value.trim();
+            const userQuery = document.getElementById('topic').value.trim();
+            
+            // Logic to fetch the correct sub-domain code
+            const subDomain = languageDirectory[userLanguage] || 'en';
+            
+            // Crafting the final Wikipedia URL
+            const finalSearchUrl = `https://${subDomain}.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(userQuery)}`;
+            
+            // Trigger redirection in a secure new tab
+            window.open(finalSearchUrl, '_blank');
+        });
+    </script>
 
 </body>
 </html>
