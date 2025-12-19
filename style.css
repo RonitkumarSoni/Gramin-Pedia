@@ -1,0 +1,189 @@
+/* GLOBAL RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Modern Font */
+    background-color: #f0f4f8; /* Soft Blue-Grey Background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* MAIN CONTAINER (Mobile App Feel) */
+.app-container {
+    width: 100%;
+    max-width: 480px; /* Perfect width for mobile view */
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+    padding: 30px;
+    height: fit-content;
+}
+
+/* HEADER */
+.app-header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* FORM STYLING */
+.search-card {
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+
+label span {
+    font-weight: 400;
+    color: #95a5a6;
+    font-size: 12px;
+}
+
+/* Professional Input Fields */
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: #f8fafc;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db; /* Blue focus color */
+    background-color: #fff;
+}
+
+/* MAIN BUTTON */
+.search-btn {
+    width: 100%;
+    background-color: #27ae60; /* Professional Green */
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+}
+
+.search-btn:active {
+    transform: scale(0.98); /* Click effect */
+}
+
+/* QUICK LIBRARY (Accordion) */
+.quick-links {
+    margin-top: 30px;
+}
+
+.quick-links h3 {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.accordion {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.accordion summary {
+    padding: 15px;
+    background-color: #f8fafc;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2c3e50;
+    list-style: none; /* Hide default arrow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom Arrow for Accordion */
+.accordion summary::after {
+    content: '+';
+    font-size: 20px;
+    color: #7f8c8d;
+}
+
+.accordion[open] summary::after {
+    content: '-';
+}
+
+.accordion-content {
+    padding: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.accordion-content a {
+    display: block;
+    padding: 8px 0;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.accordion-content a:last-child {
+    border-bottom: none;
+}
+
+/* FOOTER */
+.app-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #27ae60;
+    border-radius: 50%;
+    margin-right: 5px;
+}
